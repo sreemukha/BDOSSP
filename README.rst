@@ -32,4 +32,12 @@ TODO
 * Add your team members as collaborators & teams in the forked lead repository
 * Update contents of this 'README.rst' file
 
+Issues
+-------------------------------------------------------------------------------
 
+1. go to https://github.iu.edu/bdossp-sp16/bdossp-project
+2. click on "issues"
+3. if your issue hasn't been posted yet (either "open" or "closed") create a
+   new issue
+4. specify all the steps required to reproduce your problem, along with the
+   output and describe the expected result.
