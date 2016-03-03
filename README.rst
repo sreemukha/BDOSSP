@@ -20,22 +20,17 @@ Instruction
 * Fork to the @[Project Lead] repository
    - One of project members takes a 'Project Lead' role and fork this
      repository
+   - Other members do not fork
+   - Stay in a public repository
 * Add other team members as collaborators to your forked repository 
    - `How to add collaborators? <https://help.github.com/articles/adding-collaborators-to-a-personal-repository/>`_
-
-TODO
--------------------------------------------------------------------------------
-
-* Fork this repository in your team lead repository
-   - Other members do not have to fork
-   - Stay in a public repository
-* Add your team members as collaborators & teams in the forked lead repository
-* Update contents of this 'README.rst' file
 
 Issues
 -------------------------------------------------------------------------------
 
-1. go to https://github.iu.edu/bdossp-sp16/bdossp-project
+Your team uses GitHub Issues to communicate with AIs. 
+
+1. go to your forked project repository
 2. click on "issues"
 3. if your issue hasn't been posted yet (either "open" or "closed") create a
    new issue
