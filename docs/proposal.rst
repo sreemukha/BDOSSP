@@ -1,4 +1,4 @@
-Project Proposal (In Progress)
+Project Proposal
 ===============================================================================
 
 OLAP Analytical Query Benchmarking on Yelp Dataset (HiBench)
