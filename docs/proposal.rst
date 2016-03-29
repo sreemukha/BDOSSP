@@ -1,34 +1,30 @@
 Project Proposal (In Progress)
 ===============================================================================
 
-Your Title goes here
+OLAP Analytical Query Benchmarking on Yelp Dataset (HiBench)
 -------------------------------------------------------------------------------
 
-Description goes here
+Online Analytical Processing is a processing technique that enables a user to view the data in multiple dimensions. It can easily intersect different dimensions of data providing easy extraction for further data analysis.
+
+Our project is to perform OLAP Query Benchmarking using Hive (Join and Aggregation) on Yelp Dataset on different Hadoop cluster configurations, node sizes, and virtual instance flavors. Our goal is to find a configuration, node size, and virtual instance flavor for which the clusters created will have the maximum performance. 
 
 Team
 -------------------------------------------------------------------------------
-(YOU CAN HAVE UP TO 3 PEOPLE IN A TEAM, IF YOU WANT MORE, PLEASE
-BE SURE TO CONTACT US)
-  * Fullname, IU Username, IU GitHub Username, Portal Username (Lead)
-  * Fullname, IU Username, IU GitHub Username, Portal Username
-  * Fullname, IU Username, IU GitHub Username, Portal Username
+  * Sreemukha Taduru, staduru, staduru, staduru (Lead)
+  * Sravya Panganamamula, vpangana, vpangana, sravyasai
 
 Role
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Deployment: Member A
-* Configuration: Member B
-* Database: Member C
-* Map/Reduce Functions: Member A
-* Algorithm: Member C
-* Plot: Member C
+* Creation of Instances - Sravya
+* Setting up Environment - Sreemukha
+* Cluster Creation - Sravya, Sreemukha
+* Benchmarking on different Configurations - Sravya, Sreemukha
+* Presentation - Sravya, Sreemukha
 
 Artifacts
 -------------------------------------------------------------------------------
-
-* Put here a list of artifacts that you will create (this can be 
-  filled out at a later time)
+* Final Report which includes finding of best configurations that result in high performance
+* Source Code
 
 List of Technologies
 -------------------------------------------------------------------------------
@@ -37,14 +33,16 @@ Development Languages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Python
-* Java
+* Hive Query Language
 
 Software Tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+* Hive
 * Ansible
 * Hadoop
-* Pig
+* Zookeeper
+
 
 Compute Resources
 -------------------------------------------------------------------------------
@@ -54,15 +52,14 @@ Compute Resources
 System Requirements
 -------------------------------------------------------------------------------
 
-* Size: 10 VM instances
-* OS: Ubuntu 14.04 LTS
-* Storage: 500GB
+* Size: Upto 10 VM instances
+* OS: Ubuntu 15.10 64 bit
+* Storage: Upto 10 GB
 
 List of DataSets
 -------------------------------------------------------------------------------
-
-* Big Text From norvig.com
-* Population from census.gov
+* Yelp Dataset 
+https://www.yelp.com/dataset_challenge/dataset
 
 Schedule
 -------------------------------------------------------------------------------
@@ -73,14 +70,14 @@ Schedule
 * Week 4: Presentation
 * Week 5: Refine raw dataset
 * Week 6: Build systems
-* Week 7: Develop modules, test run
+* Week 7: Perform Benchmarking 
 * Week 8: Final Report, Review, Submission
 
 Project Style and Type
 -------------------------------------------------------------------------------
 
 * Basic
-* Deployment
+* Benchmark
 
 Acknowledgement
 -------------------------------------------------------------------------------
@@ -88,4 +85,5 @@ Acknowledgement
 This project idea is obtained from the following sources:
 
 * Running Hadoop Cluster MR1 - http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/
-*
+* http://hortonworks.com/blog/impala-vs-hive-performance-benchmark/
+* https://github.com/intel-hadoop/Big-Data-Benchmark-for-Big-Bench
