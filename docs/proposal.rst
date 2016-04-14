@@ -12,14 +12,15 @@ Team
 -------------------------------------------------------------------------------
   * Sreemukha Taduru, staduru, staduru, staduru (Lead)
   * Sravya Panganamamula, vpangana, vpangana, sravyasai
+  * Harish Reddy Nallagangireddygari, hnallaga, hnallaga, harish
 
 Role
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Creation of Instances - Sravya
-* Setting up Environment - Sreemukha
-* Cluster Creation - Sravya, Sreemukha
-* Benchmarking on different Configurations - Sravya, Sreemukha
-* Presentation - Sravya, Sreemukha
+* Setting up Environment - Harish
+* Cluster Creation - Sreemukha
+* Benchmarking on different Configurations - Sravya, Sreemukha, Harish
+* Presentation - Sravya, Sreemukha, Harish
 
 Artifacts
 -------------------------------------------------------------------------------
