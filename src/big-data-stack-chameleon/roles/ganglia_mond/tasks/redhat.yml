@@ -1,0 +1,23 @@
+---
+
+- name: install packages
+  yum:
+    name: ganglia-gmond
+    state: present
+  notify:
+   - restart gmond
+
+
+- name: configure
+  template:
+    src: gmond.conf.el7.j2
+    dest: "{{ ganglia_gmon_conf_path }}"
+    backup: yes
+  notify:
+   - restart gmond
+
+- name: start and enable gmond
+  service:
+    name: gmond
+    state: started
+    enabled: yes

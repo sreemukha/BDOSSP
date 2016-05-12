@@ -1,0 +1,45 @@
+---
+
+
+- name: install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - zookeeper
+    - zookeeper-bin
+  tags:
+    - zookeeper_install
+    - zookeeper
+    - install
+
+- name: install zookeeper service
+  when: zookeeper_install_service
+  apt:
+    name: zookeeperd
+    state: present
+  tags:
+    - zookeeper_install
+    - zookeeper
+    - install
+
+- name: set instance id
+  template:
+    src: myid.j2
+    dest: /etc/zookeeper/conf/myid
+  notify: restart zookeeper
+  tags:
+    - zookeeper_configure
+    - zookeeper
+    - configure
+
+
+- name: configure
+  template:
+    src: zoo.cfg.j2
+    dest: /etc/zookeeper/conf/zoo.cfg
+  notify: restart zookeeper
+  tags:
+    - zookeeper_configure
+    - zookeeper
+    - configure

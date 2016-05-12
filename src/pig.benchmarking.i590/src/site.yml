@@ -1,0 +1,110 @@
+--- 
+- 
+  hosts: all
+  name: debug
+  tags: debug
+  tasks: 
+    - 
+      apt: 
+        name: "{{ item }}"
+        state: present
+      become: true
+      name: "install tools"
+      with_items: 
+        - nmap
+- 
+  hosts: hadoopnodes
+  name: "Install the Software"
+  tags: software
+  tasks: 
+    - 
+      apt: 
+        name: "{{ item }}"
+        state: present
+      become: true
+      name: "install dependencies"
+      with_items: 
+        - unzip
+  vars: 
+    yelp_version: "2016"
+- 
+  hosts: frontendnodes
+  name: "Deploy the dataset"
+  tags: data
+  tasks: 
+    - 
+      apt: 
+        name: unzip
+        state: present
+      become: true
+      name: "install dependencies"
+    - 
+      file: 
+        path: "{{ item }}"
+        state: directory
+      name: "prepare the data directory"
+      with_items: 
+        - "{{ download_dir }}"
+        - "{{ db_dir }}"
+    - 
+      get_url: 
+        dest: "{{ download_dir }}"
+        timeout: 600
+        url: "{{ databases.4.url }}"
+      name: download
+    - 
+      become: true
+      name: extract
+      unarchive: 
+        copy: false
+        creates: "{{ db4_path }}"
+        dest: "{{ db_dir }}"
+        group: hadoop
+        owner: hadoop
+        src: "{{ download_dir }}/{{ db_name }}"
+    - 
+      become: true
+      file: 
+        group: hadoop
+        owner: hadoop
+        path: "{{ db_dir }}"
+        recurse: true
+      name: "fix permissions"
+    - 
+      args: 
+        creates: "{{ db_dir }}/.imported-to-hdfs"
+      become: true
+      become_user: hadoop
+      name: "import databases into hdfs"
+      shell: "sh -lc 'hadoop fs -put {{ db_dir }} / && touch {{ db_dir }}/.imported-to-hdfs'"
+  vars: 
+    databases: 
+      4: 
+        url: "https://iu.box.com/shared/static/pj3lj9ily2g6rg5a19c14hut69b8fud2.zip"
+    db4_path: "{{ db_dir }}/{{ databases.4.url | splitext | first }}"
+    db_dir: /tmp/yelp
+    db_name: yelp_dataset.zip
+    download_dir: /tmp
+- 
+  hosts: frontendnodes
+  name: "Run the  analysis code"
+  tags: analysis
+  tasks: 
+    - 
+      become: true
+      copy: 
+        dest: "/home/hadoop/{{ item | basename }}"
+        owner: hadoop
+        src: "{{ item }}"
+      name: "copy the analysis scripts"
+      with_items: 
+        - ./load.pig
+        - ./load_r5.pig
+        - ./aggregate.pig
+        - ./aggregate_r5.pig
+        - ./join.pig
+        - ./join_r5.pig
+        - ./filter.pig
+        - ./filter_r5.pig
+        - ./main.sh
+

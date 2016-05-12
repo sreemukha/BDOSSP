@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Sreemukha Taduru
+  description: 
+  company: Indiana University
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - development
+  - system
+dependencies: []

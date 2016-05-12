@@ -1,0 +1,53 @@
+---
+
+- name: ensure configuration directory exists
+  file:
+    path: "{{ hbase_cfg_path }}"
+    state: directory
+
+- name: clear configuration
+  copy:
+    src: empty-site.xml
+    dest: "{{ hbase_cfg_path }}/{{ item }}"
+  with_items: "{{ hbase_clear_configs }}"
+
+- name: configure hbase-site.xml
+  lineinfile:
+    dest: "{{ hbase_cfg_path }}/hbase-site.xml"
+    insertbefore: "</configuration>"
+    line: "  <property>\n    <name>{{ item.key }}</name>\n    <value>{{ item.value }}</value>\n  </property>\n"
+  with_dict: "{{ hbase_site }}"
+
+- name: configure hbase-policy.xml
+  lineinfile:
+    dest: "{{ hbase_cfg_path }}/hbase-policy.xml"
+    insertbefore: "</configuration>"
+    line: "  <property>\n    <name>{{ item.key }}</name>\n    <value>{{ item.value }}</value>\n  </property>\n"
+  with_dict: "{{ hbase_policy }}"
+
+- name: set log dir
+  lineinfile:
+    dest: "{{ hbase_cfg_path }}/log4j.properties"
+    regexp: '^(hbase.log.dir=)'
+    backrefs: yes
+    line: '\1{{ hbase_log_dir }}'
+
+- name: create the log dir
+  file:
+    path: "{{ hbase_log_dir }}"
+    state: directory
+    owner: "{{ hbase_user }}"
+    group: "{{ hbase_group }}"
+    recurse: yes
+
+- name: set log4j.appender.RFAS.File
+  # the default value is ${hbase.log.dir}/${hbase.security.log.file}
+  # but if ${hbase.log.dir} is not expanded (even if hbase.log.dir is
+  # set in hbase-site.xml or log4j.properties!!) you get a
+  # java.io.FileNotFoundException: /opt/hbase/logs/SecurityAuth.audit (No such file or directory)
+  lineinfile:
+    dest: "{{ hbase_cfg_path }}/log4j.properties"
+    regexp: '^(log4j\.appender\.RFAS\.File)=.*$'
+    backrefs: yes
+    line: '\1={{ hbase_log_dir }}/${hbase.security.log.file}'
+

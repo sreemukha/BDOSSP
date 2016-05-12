@@ -1,0 +1,60 @@
+---
+
+- name: configure | ensure cfg_dirs exist
+  file:
+    path: "{{ item }}"
+    owner: "{{ nagios_server_user }}"
+    group: "{{ nagios_server_user }}"
+    mode: 0775
+    state: directory
+  with_items:
+    - "{{ __nagios_server_servers_path }}"
+    - "{{ __nagios_server_commands_path }}"
+    - "{{ __nagios_server_hostgroups_path }}"
+    - "{{ __nagios_server_services_path }}"
+  tags:
+    - nagios
+    - config
+    - server
+
+- name: configure | load from cfg_dirs
+  lineinfile:
+    dest: "{{ __nagios_server_nagios_cfg }}"
+    insertafter: 'cfg_file=(/[a-zA-Z0-9-_\.]+)+/templates.cfg'
+    line: 'cfg_dir={{ item }}'
+    state: present
+  with_items:
+    - "{{ __nagios_server_servers_path }}"
+    - "{{ __nagios_server_commands_path }}"
+    - "{{ __nagios_server_hostgroups_path }}"
+    - "{{ __nagios_server_services_path }}"
+  tags:
+    - nagios
+    - config
+    - server
+
+- name: configure | add commands
+  copy:
+    dest: "{{ __nagios_server_commands_path }}/check_nrpe.cfg"
+    src: "commands/{{ item }}"
+    owner: "{{ nagios_server_user }}"
+    group: "{{ nagios_server_user }}"
+    mode: 0664
+  with_items: nagios_server_additional_commands
+  tags:
+    - nagios
+    - config
+    - server
+    - check_nrpe
+
+- name: configure | contacts
+  template:
+    src: contacts.cfg.j2
+    dest: "{{ __nagios_server_contacts_cfg }}"
+    owner: "{{ nagios_server_user }}"
+    group: "{{ nagios_server_user }}"
+    mode: 0640
+  tags:
+    - nagios
+    - config
+    - contacts

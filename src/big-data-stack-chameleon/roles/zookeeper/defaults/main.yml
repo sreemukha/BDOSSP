@@ -1,0 +1,12 @@
+---
+
+zookeeper_install_service: no
+
+zookeeper_id: 0
+
+zookeeper_port: 2181
+
+zookeeper_node_iface: ansible_eth0
+
+zookeeper_nodes:
+  - localhost

@@ -1,0 +1,15 @@
+---
+
+hadoop_cfg_path: "/opt/hadoop/etc/hadoop"
+hadoop_user: hadoop
+hadoop_group: hadoop
+
+clear_configs: []
+
+core_site: {}
+
+hdfs_site: {}
+
+yarn_site: {}
+
+mapred_site: {}

@@ -1,0 +1,2 @@
+cd ~
+pig demo.pig

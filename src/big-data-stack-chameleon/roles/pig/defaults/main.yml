@@ -1,0 +1,7 @@
+---
+
+pig_version: 0.15.0
+pig_install_dest: /opt
+
+_pig_bin_sha256:
+  0.15.0: c52112ca618daaca298cf068e6451449fe946e8dccd812d56f8f537aa275234b
