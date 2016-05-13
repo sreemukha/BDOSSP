@@ -48,7 +48,7 @@ To run the project, please follow the steps in `installation.rst file <installat
 RESULTS
 -------------------------------------------------------------------------------
 The following results were obtained after running the above pig scripts. Note that the results obtained were different everytime the scripts were run. The initial results are as follows:
-Find the `screenshots <Images>`_ of the results obtained.
+`CLICK HERE to see the screenshots <Images>`_ of the results obtained.
 
     ``Converting yelp_dataset_academic_review.json to yelp_dataset_academic_review.tsv:``
     
@@ -72,7 +72,7 @@ Find the `screenshots <Images>`_ of the results obtained.
     * 5 Reducers: 25 seconds, 606 milliseconds.
     
 -------------------------------------------------------------------------------
-Findings
+FINDINGS
 -------------------------------------------------------------------------------
 
 After running the scripts, we found that the run time of the scripts improved considerably by changing the number of reducers compared to default configuration. The default configuration was with parallelism 2 (2 reducers). We have executed the scripts with parallelism 5 (5 reducers) and obtained the above results. It was also found that the configuration did not change for the 1st and 4th scripts described in the above section. 
