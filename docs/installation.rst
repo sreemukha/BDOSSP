@@ -9,6 +9,7 @@ The following prerequisites are required to run the project
 * fresh cloud environment
 * load openstack module
 * enable virtualenv
+* we already have `big-data-stack-chameleon <src/big-data-stack-chameleon>`_ in this repository at `src/big-data-stack-chameleon <src/big-data-stack-chameleon>`_ 
 
 
 Installation
