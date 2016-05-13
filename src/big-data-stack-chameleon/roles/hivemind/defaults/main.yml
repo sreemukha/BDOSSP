@@ -1,5 +1,0 @@
----
-# defaults file for hivemind
-hivemind_repo: 'github.com/DarthSim/hivemind'
-golang_gopath: /opt/gopath
-deploy_user: vagrant

@@ -1,7 +1,0 @@
----
-- name: put hiveserver2-{{ env_name }}.rb eye config file
-  template: src=hiveserver2.rb dest=/etc/eye/hiveserver2-{{ env_name }}.rb owner=root group=root mode=0644
-
-- name: load config in eye
-  command: bash -c "source /usr/local/rvm/scripts/rvm && eye l /etc/eye/apps.eye"
-  sudo: yes

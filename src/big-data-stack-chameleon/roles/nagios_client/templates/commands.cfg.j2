@@ -1,6 +1,0 @@
-#jinja2:lstrip_blocks: True
-# {{ ansible_managed }}
-
-{% for cmd in nagios_client_commands %}
-  command[{{ cmd.name }}]={{ cmd.line }}
-{% endfor %}
