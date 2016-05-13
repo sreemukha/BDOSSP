@@ -9,16 +9,14 @@ The following prerequisites are required to run the project
 * fresh cloud environment
 * load openstack module
 * enable virtualenv
-* we already have `big-data-stack-chameleon <src/big-data-stack-chameleon>`_ in this repository at `src/big-data-stack-chameleon <src/big-data-stack-chameleon>`_ 
+* clone `sw-project-template <https://github.iu.edu/staduru/sw-project-template>`_ & `big-data-stack <https://github.com/futuresystems/big-data-stack>`_ repositories at the same directory level  - ::
+
+    git clone https://github.iu.edu/staduru/sw-project-template.git
+    git clone https://github.com/futuresystems/big-data-stack.git
 
 
 Installation
 -------------------------------------------------------------------------------
-
-Pull the code from the git repository by using the following command in any local repository - ::
-
-    git clone https://github.iu.edu/staduru/sw-project-template.git
-
 Change directory to sw-project-template/src folder and run the launch.sh script as shown  - ::
 
     cd sw-project-template/src
