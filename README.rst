@@ -5,7 +5,8 @@ Final Project
 
 * Link to `project report <docs/README.rst>`_ 
 
-* Link to `big-data-stack-chameleon <src/big-data-stack-chameleon>`_
+* Link to `futuresystems/big-data-stack <https://github.com/futuresystems/big-data-stack>`_
+
 Directory Structure
 -------------------------------------------------------------------------------
 
