@@ -1,8 +1,9 @@
 Final Project
 ===============================================================================
 
-This is a template repository for the class final project. Your project lead
-forks this repository to start working on a project. 
+* Link to `installation instructions <docs/installation.rst>`_
+
+* Link to `project report <docs/README.rst>`_ 
 
 Directory Structure
 -------------------------------------------------------------------------------
