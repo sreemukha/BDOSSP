@@ -15,9 +15,7 @@ This project is about performing preprocessing on Yelp Dataset using Apache PIG.
 -------------------------------------------------------------------------------
 PROBLEM STATEMENT
 -------------------------------------------------------------------------------
-In this project, we are running pig scripts on yelp dataset to process the data. The dataset is loaded into the Hadoop virtual instances using ansible. We have written scripts on different JSON files and converted them into a .tsv format. In addition, we have performed both join and aggregation on the yelp dataset using pig scripts. We have also varied the number of reducers in these scripts to compare the run time before and after changing these parameters. 
-
-The primary goal of this project is to perform benchmarking on yelp dataset. Benchmarking is an important means by which the performance of a system can be measured. In this project, we have benchmarked the running time of these scripts on different JSON files present in the yelp dataset.
+In this project, we are running pig scripts on yelp dataset to process the data. The dataset is loaded into the Hadoop cluster using ansible. There are *PIG Scripts* which converts JSON dataset into a TSV format. Next, we perform both join and aggregation on the yelp dataset using  *PIG Scripts*. *Benchmarking* is an important means by which the performance of a system can be measured. On the preformance part, We are trying different numbers of reducers (in pig scripts) to compare the job execution times before and after changing these parameters. 
 
 We initially planned to write HIVE queries, but realized that the dataset requires lots of preprocessing as it is in JSON format. We have therefore written pig scripts to preprocess and perform different functions such as join, aggregation, filter, etc. on the data. However, we have performed benchmarking on yelp dataset which is the primary style of this project. 
 
