@@ -15,7 +15,7 @@ This project is about performing preprocessing on Yelp Dataset using Apache PIG.
 -------------------------------------------------------------------------------
 PROBLEM STATEMENT
 -------------------------------------------------------------------------------
-In this project, we are running pig scripts on yelp dataset to process the data. The dataset is loaded into the Hadoop cluster using ansible. There are *PIG Scripts* which converts JSON dataset into a TSV format. Next, we perform both join and aggregation on the yelp dataset using  *PIG Scripts*. *Benchmarking* is an important means by which the performance of a system can be measured. On the preformance part, We are trying different numbers of reducers (in pig scripts) to compare the job execution times before and after changing these parameters. 
+In this project, we are running pig scripts on yelp dataset to process the data. The dataset is loaded into the Hadoop cluster using ansible. There are *PIG Scripts* which converts JSON dataset into a TSV format. Next, we perform both join and aggregation on the yelp dataset using  *PIG Scripts*. *Benchmarking* is an important means by which the performance of a system can be measured. On the preformance part, we are trying different number of reducers (in pig scripts) to compare the job execution times before and after changing these parameters. 
 
 We initially planned to write HIVE queries, but realized that the dataset requires lots of preprocessing as it is in JSON format. We have therefore written pig scripts to preprocess and perform different functions such as join, aggregation, filter, etc. on the data. However, we have performed benchmarking on yelp dataset which is the primary style of this project. 
 
@@ -48,7 +48,7 @@ To run the project, please follow the steps in `installation.rst file <installat
 RESULTS
 -------------------------------------------------------------------------------
 The following results were obtained after running the above pig scripts. Note that the results obtained were different everytime the scripts were run. The initial results are as follows:
-`CLICK HERE to see the screenshots <Images>`_ of the sample results obtained.
+`CLICK HERE <Images>`_ to see the screenshots of the sample results obtained.
 
     ``Converting yelp_dataset_academic_review.json to yelp_dataset_academic_review.tsv:``
     
