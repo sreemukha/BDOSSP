@@ -4,11 +4,12 @@ Installation
 Prerequisite
 -------------------------------------------------------------------------------
 
-This is an example of hadoop cluster installation.
+The following prerequisites are required to run the project
 
-* Ansible
-* ``inventory.txt`` file
-* 10 vm servers with m1.medium
+* fresh cloud environment
+* load openstack module
+* enable virtualenv
+
 
 Installation
 -------------------------------------------------------------------------------
