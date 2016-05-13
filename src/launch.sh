@@ -2,7 +2,7 @@
 #sleep 60s
 mypwd=$(pwd)
 cd "big-data-stack-chameleon/"
-vcl boot -p openstack -P $USER-cc-
+vcl boot -p openstack -P $USER-
 sleep 200s
 ansible-playbook play-hadoop.yml
 ansible-playbook addons/pig.yml
