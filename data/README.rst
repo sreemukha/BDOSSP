@@ -5,6 +5,10 @@ Datasets or intermediate files should be located in this directory. If original
 datasets are bigger than 10MB, add a link to the file in this README file and
 create a sample file which is less then 10MB and add in this directory.
 
+The dataset can be downloaded from the following link: 
+
+https://iu.box.com/shared/static/pj3lj9ily2g6rg5a19c14hut69b8fud2.zip
+
 
 TODO
 -------------------------------------------------------------------------------
