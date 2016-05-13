@@ -1,4 +1,3 @@
-
 OLAP Processing and Benchmarking on Yelp Dataset
 -------------------------------------------------------------------------------
 TEAM
