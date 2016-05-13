@@ -97,3 +97,5 @@ REFERENCES
 
 [6] http://blog.cloudera.com/blog/2015/07/how-to-tune-mapreduce-parallelism-in-apache-pig-jobs/
 
+[7] https://www.yelp.com/dataset_challenge
+
