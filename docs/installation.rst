@@ -35,3 +35,5 @@ After ssh into hadoop, the following commands should be used:
     bash
     
     source main.sh
+    
+Go back to `project report <Readme.rst>`_.
