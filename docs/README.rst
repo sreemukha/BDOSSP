@@ -109,10 +109,15 @@ Also, the run time varied every time the script was run. There were no stable ru
 REFERENCES
 -------------------------------------------------------------------------------
 
-   [1] https://pig.apache.org/
-   [2] http://blog.cloudera.com/blog/2015/07/how-to-tune-mapreduce-parallelism-in-apache-pig-jobs/
-   [3] https://hadoopjournal.wordpress.com/2015/05/30/set-reducers-in-pig-hive-and-mapreduce/
-   [4] http://www.tutorialspoint.com/apache_pig/pig_latin_basics.htm
-   [5] https://pig.apache.org/docs/r0.11.1/perf.html
-   [6] http://blog.cloudera.com/blog/2015/07/how-to-tune-mapreduce-parallelism-in-apache-pig-jobs/
+[1] https://pig.apache.org/
+
+[2] http://blog.cloudera.com/blog/2015/07/how-to-tune-mapreduce-parallelism-in-apache-pig-jobs/
+
+[3] https://hadoopjournal.wordpress.com/2015/05/30/set-reducers-in-pig-hive-and-mapreduce/
+
+[4] http://www.tutorialspoint.com/apache_pig/pig_latin_basics.htm
+
+[5] https://pig.apache.org/docs/r0.11.1/perf.html
+
+[6] http://blog.cloudera.com/blog/2015/07/how-to-tune-mapreduce-parallelism-in-apache-pig-jobs/
 
