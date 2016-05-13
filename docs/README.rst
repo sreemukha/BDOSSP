@@ -50,7 +50,7 @@ To run the project, kindly follow the steps in `installation.rst file <installat
 RESULTS
 -------------------------------------------------------------------------------
 The following results were obtained after running the above pig scripts. Note that the results obtained were different everytime the scripts were run. The initial results are as follows:
-Find the `screenshots<Images>_` of the results obtained.
+Find the `screenshots <Images>`_ of the results obtained.
 
     Converting yelp_dataset_academic_review.json to yelp_dataset_academic_review.tsv
     
