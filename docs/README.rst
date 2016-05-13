@@ -77,7 +77,7 @@ Findings
 
 After running the scripts, we found that the run time of the scripts improved considerably by changing the number of reducers compared to default configuration. The default configuration was with parallelism 2 (2 reducers). We have executed the scripts with parallelism 5 (5 reducers) and obtained the above results. It was also found that the configuration did not change for the 1st and 4th scripts described in the above section. 
 
-Also, the run time varied every time the script was run. There were no stable run times obtained for the scripts i.e. the run times changed with every run.  
+Also, the run time varied every time the script was run. There were no stable run times obtained for the scripts i.e. the run times changed with every run so we have taken the average run times after performing multiple runs of same configuration.
 
 -------------------------------------------------------------------------------
 REFERENCES
