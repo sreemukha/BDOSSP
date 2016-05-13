@@ -13,4 +13,4 @@ mkdir "big-data-stack-chameleon/examples/src"
 cd "big-data-stack-chameleon/"
 ls -al
 ansible-playbook examples/src/site.yml
-nova list | grep $USER-cc-
+nova list | grep $USER-
