@@ -7,6 +7,8 @@ Final Project
 
 * Link to `futuresystems/big-data-stack <https://github.com/futuresystems/big-data-stack>`_
 
+* Link to `dataset <https://iu.box.com/shared/static/pj3lj9ily2g6rg5a19c14hut69b8fud2.zip>`_
+
 Directory Structure
 -------------------------------------------------------------------------------
 
